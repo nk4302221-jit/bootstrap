@@ -3,181 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap tutorial</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-        <!-- navbar end -->
+    <title>Online Shopping Cart - E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        <!-- slider start -->
-        <div class="row mt-5">
-            <div class="col-sm-12">
-                <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="kids.avif" class="d-block w-100" alt="Slide 1">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img src="stactenaries.jpg" class="d-block w-100" alt="Slide 2">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Cloths.jpg" class="d-block w-100" alt="Slide 3">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative plahttp://127.0.0.1:3000/index.html?vscode-livepreview=true#ceholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+    <style>
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: white !important;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0d6efd !important;
+        }
+
+        .navbar-brand:hover {
+            color: #0b5ed7 !important;
+            transition: 0.3s;
+        }
+
+        .carousel {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .carousel-caption h5 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .carousel-caption p {
+            font-size: 1.1rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #666;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0d6efd;
+            margin: 10px 0;
+        }
+
+        .card-original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .card-rating {
+            color: #ffc107;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .badge-discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-add-cart {
+            background-color: #0d6efd;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-weight: bold;
+            width: 100%;
+            transition: all 0.3s;
+            margin-top: auto;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #0b5ed7;
+            transform: scale(1.02);
+        }
+
+        .btn-add-cart:active {
+            transform: scale(0.98);
+        }
+
+        .carousel-section {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
+
+        .products-section {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding: 0 15px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #212529;
+            margin-top: 50px;
+            padding: 40px 0;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-column {
+            border-right: 1px solid #444;
+            padding: 20px;
+        }
+
+        .footer-column:last-child {
+            border-right: none;
+        }
+
+        .footer-column h5 {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-column p {
+            color: #adb5bd;
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            margin-top: 30px;
+            padding-top: 20px;
+            color: #adb5bd;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .footer-column {
+                border-right: none;
+                border-bottom: 1px solid #444;
+                padding: 15px;
+            }
+
+            .footer-column:last-child {
+                border-bottom: none;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .carousel-caption h5 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">🛒 ShopHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#">Fashion</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">All Products</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search" />
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="carousel-section container-fluid">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="front page.png" class="d-block w-100" alt="Banner 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="front 2.png" class="d-block w-100" alt="Banner 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="front 3.png" class="d-block w-100" alt="Banner 3">
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <!-- slider end -->
+    </div>
 
-        <!-- cards start -->
-        <div class="row mt-3 g-3">
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="computer.jpg" class="card-img-top" alt="Card image 1">
-            <div class="card-body">
-                <p class="card-text">Computer System .</p>
+    <div class="products-section container-fluid">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="computer system.png" class="card-img-top" alt="Computer System">
+                        <span class="badge bg-danger position-absolute top-0 end-0 m-2">-20%</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Computer System</h5>
+                        <p class="card-text">High-performance desktop computer for gaming and productivity.</p>
+                        <div class="card-rating text-warning">★★★★☆ (4/5)</div>
+                        <div class="card-price text-success">$999</div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper">
+                        <img src="Laptop.png" class="card-img-top" alt="Laptop Pro">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Laptop</h5>
+                        <p class="card-text">Powerful ultrabook for professionals and content creators.</p>
+                        <div class="card-rating">★★★★★ (5/5)</div>
+                        <div class="card-price">$1,499</div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="cloths.png" class="card-img-top" alt="Premium Clothing">
+                        <span class="badge-discount">-30%</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Clothing</h5>
+                        <p class="card-text">Stylish and comfortable apparel for everyday wear.</p>
+                        <div class="card-rating">★★★★☆ (4/5)</div>
+                        <div class="card-price">$49</div>
+                        <span class="card-original-price">$79</span>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="Electronics-components-985x642.jpg" class="card-img-top" alt="Electronic Components">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Electronic Components</h5>
+                        <p class="card-text">Quality parts and components for DIY projects.</p>
+                        <div class="card-rating">★★★★☆ (4/5)</div>
+                        <div class="card-price">$199</div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="smart device.png" class="card-img-top" alt="Smart Device">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Smart Device</h5>
+                        <p class="card-text">Connected technology for modern smart living.</p>
+                        <div class="card-rating">★★★★★ (5/5)</div>
+                        <div class="card-price">$299</div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="latest gadjet.png" class="card-img-top" alt="Latest Gadget">
+                        <span class="badge-discount" style="background: #6c63ff;">SALE</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Latest Gadget</h5>
+                        <p class="card-text">Cutting-edge innovation in portable technology.</p>
+                        <div class="card-rating">★★★★☆ (4/5)</div>
+                        <div class="card-price">$399</div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="portable device.png" class="card-img-top" alt="Portable Device">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Portable Device</h5>
+                        <p class="card-text">Take technology anywhere with this portable solution.</p>
+                        <div class="card-rating">★★★★★ (5/5)</div>
+                        <div class="card-price">$349</div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-img-wrapper" style="position: relative;">
+                        <img src="premium shoes.png" class="card-img-top" alt="Premium Shoes">
+                        <span class="badge-discount" style="background: #9b59b6;">PREMIUM</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Shoes</h5>
+                        <p class="card-text">Comfort and style combined in one perfect pair.</p>
+                        <div class="card-rating">★★★★★ (5/5)</div>
+                        <div class="card-price">$89</div>
+                        <button class="btn btn-primary btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="laptopstopicpage-2048px-3685-3x2-1.webp" class="card-img-top" alt="Card image 2">
-            <div class="card-body">
-                <p class="card-text">Laptops.</p>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-column">
+                    <h5>About Us</h5>
+                    <p><a href="#">Company Info</a></p>
+                    <p><a href="#">Our Mission</a></p>
+                    <p><a href="#">Team</a></p>
+                    <p><a href="#">Careers</a></p>
+                </div>
+
+                <div class="col-md-3 footer-column">
+                    <h5>Shop</h5>
+                    <p><a href="#">All Products</a></p>
+                    <p><a href="#">Electronics</a></p>
+                    <p><a href="#">Fashion</a></p>
+                    <p><a href="#">Accessories</a></p>
+                </div>
+
+                <div class="col-md-3 footer-column">
+                    <h5>Support</h5>
+                    <p><a href="#">Contact Us</a></p>
+                    <p><a href="#">FAQ</a></p>
+                    <p><a href="#">Shipping Info</a></p>
+                    <p><a href="#">Returns</a></p>
+                </div>
+
+                <div class="col-md-3 footer-column">
+                    <h5>Connect</h5>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Twitter</a></p>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">LinkedIn</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p style="margin-bottom: 5px;">© 2024 ShopHub. All rights reserved.</p>
+                <p>Designed &amp; Developed with ❤️ by Nirbhay</p>
             </div>
         </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="laptopstopicpage-2048px-3685-3x2-1.webp" class="card-img-top" alt="Card image 3">
-            <div class="card-body">
-                <p class="card-text">Laptop.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="Electronics-components-985x642.jpg" class="card-img-top" alt="Card image 4">
-            <div class="card-body">
-                <p class="card-text">Electronic components.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="laptopstopicpage-2048px-3685-3x2-1.webp" class="card-img-top" alt="Card image 3">
-            <div class="card-body">
-                <p class="card-text">Laptop.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="laptopstopicpage-2048px-3685-3x2-1.webp" class="card-img-top" alt="Card image 3">
-            <div class="card-body">
-                <p class="card-text">Laptop.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="laptopstopicpage-2048px-3685-3x2-1.webp" class="card-img-top" alt="Card image 3">
-            <div class="card-body">
-                <p class="card-text">Laptop.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
-        <div class="card h-100">
-            <img src="laptopstopicpage-2048px-3685-3x2-1.webp" class="card-img-top" alt="Card image 3">
-            <div class="card-body">
-                <p class="card-text">Laptop.</p>
-            </div>
-        </div>
-        <!-- cards end -->
-        <!-- footer start -->
-        <div class="row bg-dark pt-5 pb-5 text-center pb-5" style="color: white;">
-        <div class="col-sm-3" style="border-right: 1px dotted white;">
-         Home <br> Company <br> About us <br> Contact us
-        </div>
-        <div class="col-sm-3" style="border-right: 1px dotted white;">
-         Home <br> Company <br> About us <br> Contact us
-        </div>
-        <div class="col-sm-3" style="border-right: 1px dotted white;">
-         Home <br> Company <br> About us <br> Contact us
-        </div>
-        <div class="col-sm-3">
-         Home <br> Company <br> About us <br> Contact us
-        </div>
-        </div>
-        <div class="row bg-dark">
-        <div class="col-sm-12 text-center pb-3" style="color: white;">
-        This is  e-commerce project. <br> All rights reserved by @Nirbhay
-        </div>
-        </div>
-        <!-- footer end -->
-        </div>
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
