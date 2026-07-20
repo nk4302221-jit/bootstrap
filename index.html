@@ -30,10 +30,12 @@
             box-shadow: 0 3px 5px rgba(0,0,0,0.1);
         }
 
+        /* Desktop / large screens */
         .carousel-item img {
-            height: 450px;
+            height: 500px;
             width: 100%;
             object-fit: cover;
+            object-position: center;
             margin: 0 auto;
         }
 
@@ -52,6 +54,42 @@
             font-size: 1.1rem;
         }
 
+        /* Tablets */
+        @media (max-width: 991.98px) {
+            .carousel-item img {
+                height: 380px;
+            }
+        }
+
+        /* Phones */
+        @media (max-width: 575.98px) {
+            .carousel-item img {
+                height: 220px;
+            }
+
+            .carousel-caption {
+                padding: 6px 10px;
+            }
+
+            .carousel-caption h2 {
+                font-size: 0.85rem;
+            }
+
+            .carousel-caption p {
+                font-size: 0.75rem;
+            }
+
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            .carousel-indicators [data-bs-target] {
+                height: 6px;
+            }
+        }
+
         .card {
             border: none;
             border-radius: 10px;
@@ -68,9 +106,37 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.15);
         }
 
+        /* Desktop / laptop */
         .card-img-top {
             height: 250px;
             object-fit: cover;
+        }
+
+        /* Tablets */
+        @media (max-width: 991.98px) {
+            .card-img-top {
+                height: 210px;
+            }
+        }
+
+        /* Phones */
+        @media (max-width: 575.98px) {
+            .card-img-top {
+                height: 170px;
+            }
+
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .card-price {
+                font-size: 1.25rem;
+            }
+
+            .btn-add-cart {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
         }
 
         .card-body {
@@ -290,22 +356,12 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
                     <img src="sale-banner.png" class="d-block w-100" alt="Big Sale Banner">
-                    <div class="carousel-caption d-none d-md-block">
-                    </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="banner-shipping.png" class="d-block w-100" alt="New Arrivals Banner">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>New Arrivals</h2>
-                        <p>Fresh gadgets and gear just landed</p>
-                    </div>
+                    <img src="banner-shipping.png" class="d-block w-100" alt="Free Shipping Banner">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src="banner-fashion.png" class="d-block w-100" alt="Free Shipping Banner">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h2>Free Shipping</h2>
-                        <p>On all orders above $499</p>
-                    </div>
+                    <img src="banner-fashion.png" class="d-block w-100" alt="Fashion Sale Banner">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -326,7 +382,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
                     <div class="card-img-wrapper">
-                        <img src="computer system.png" class="card-img-top" alt="Computer System">
+                        <img src="computer-system.png" class="card-img-top" alt="Computer System">
                         <span class="badge bg-danger position-absolute top-0 end-0 m-2">-20%</span>
                     </div>
                     <div class="card-body">
@@ -342,7 +398,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
                     <div class="card-img-wrapper">
-                        <img src="Laptop.png" class="card-img-top" alt="Laptop Pro">
+                        <img src="laptop.png" class="card-img-top" alt="Laptop Pro">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Premium Laptop</h5>
@@ -357,7 +413,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
                     <div class="card-img-wrapper">
-                        <img src="cloths.png" class="card-img-top" alt="Premium Clothing">
+                        <img src="clothing.png" class="card-img-top" alt="Premium Clothing">
                         <span class="badge-discount">-30%</span>
                     </div>
                     <div class="card-body">
@@ -373,7 +429,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
                     <div class="card-img-wrapper">
-                        <img src="Electronics-components-985x642.jpg" class="card-img-top" alt="Electronic Components">
+                        <img src="electronics.png" class="card-img-top" alt="Electronic Components">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Electronic Components</h5>
@@ -388,7 +444,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
                     <div class="card-img-wrapper">
-                        <img src="smart device.png" class="card-img-top" alt="Smart Device">
+                        <img src="smart-device.png" class="card-img-top" alt="Smart Device">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Smart Device</h5>
@@ -403,7 +459,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100 shadow-sm">
                     <div class="card-img-wrapper">
-                        <img src="latest gadjet.png" class="card-img-top" alt="Latest Gadget">
+                        <img src="gadget.png" class="card-img-top" alt="Latest Gadget">
                         <span class="badge-discount">SALE</span>
                     </div>
                     <div class="card-body">
@@ -419,7 +475,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
                     <div class="card-img-wrapper">
-                        <img src="portable device.png" class="card-img-top" alt="Portable Device">
+                        <img src="portable.png" class="card-img-top" alt="Portable Device">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Portable Device</h5>
@@ -434,7 +490,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
                     <div class="card-img-wrapper">
-                        <img src="premium shoes.png" class="card-img-top" alt="Premium Shoes">
+                        <img src="shoes.png" class="card-img-top" alt="Premium Shoes">
                         <span class="badge-discount">PREMIUM</span>
                     </div>
 
