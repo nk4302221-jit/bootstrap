@@ -29,13 +29,12 @@
             overflow: hidden;
             box-shadow: 0 3px 5px rgba(0,0,0,0.1);
         }
-         
-        .carousel-item {
-         height: 1000px;        
-         width : 100%;
-         object-fit : cover;
-         margin: 0 auto;
-        
+
+        .carousel-item img {
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+            margin: 0 auto;
         }
 
         .carousel-caption {
@@ -238,7 +237,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light  bg-warning sticky-top S ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">🛒 ShopHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -252,7 +251,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="#products">Products</a>   
+                        <a class="nav-link" href="#products">Products</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -289,14 +288,24 @@
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active"data-bs-interval="1000">
-                    <img src="front page.png" class="d-block w-100" alt="Banner 1">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="sale-banner.png" class="d-block w-100" alt="Big Sale Banner">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="500">
-                    <img src="front 2.png" class="d-block w-100" alt="Banner 2">
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="banner-shipping.png" class="d-block w-100" alt="New Arrivals Banner">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>New Arrivals</h2>
+                        <p>Fresh gadgets and gear just landed</p>
+                    </div>
                 </div>
-                <div class="carousel-item"data-bs-interval="500">
-                    <img src="front 3.png" class="d-block w-100" alt="Banner 3">
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="banner-fashion.png" class="d-block w-100" alt="Free Shipping Banner">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Free Shipping</h2>
+                        <p>On all orders above $499</p>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -310,7 +319,7 @@
         </div>
     </div>
 
-    <div class="products-section container-fluid"  id="products" data-bs-interval="500">
+    <div class="products-section container-fluid" id="products">
         <h2 class="section-title">Featured Products</h2>
         <div class="row g-4">
 
@@ -378,7 +387,7 @@
 
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" style">
+                    <div class="card-img-wrapper">
                         <img src="smart device.png" class="card-img-top" alt="Smart Device">
                     </div>
                     <div class="card-body">
@@ -395,7 +404,7 @@
                 <div class="card h-100 shadow-sm">
                     <div class="card-img-wrapper">
                         <img src="latest gadjet.png" class="card-img-top" alt="Latest Gadget">
-                        <span class="badge-discount" SALE</span>
+                        <span class="badge-discount">SALE</span>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Latest Gadget</h5>
@@ -421,14 +430,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" >
+                    <div class="card-img-wrapper">
                         <img src="premium shoes.png" class="card-img-top" alt="Premium Shoes">
-                        <span class="badge-discount">
-                            PREMIUM
-                        </span>
+                        <span class="badge-discount">PREMIUM</span>
                     </div>
 
                     <div class="card-body">
@@ -481,8 +488,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p> style="margin-bottom: 5px;">© 2024 ShopHub. All rights reserved.</p>
-                <p>Designed &amp; Developed with  Bootstarp</p>
+                <p style="margin-bottom: 5px;">© 2024 ShopHub. All rights reserved.</p>
+                <p>Designed &amp; Developed with Bootstrap</p>
             </div>
         </div>
     </footer>
