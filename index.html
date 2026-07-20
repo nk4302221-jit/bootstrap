@@ -9,8 +9,8 @@
 
     <style>
         .navbar {
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            background: white !important;
+            box-shadow: 0 2px 4px rgba(6, 5, 5, 0.655);
+            background: rgba(202, 198, 7, 0.823) !important;
         }
 
         .navbar-brand {
@@ -25,19 +25,27 @@
         }
 
         .carousel {
-            border-radius: 10px;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+         
+        .carousel-item {
+         height: 900px;        
+         width : 90%;
+         object-fit : cover;
+         margin: 0 auto;
+        
         }
 
         .carousel-caption {
             background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 5px;
+            padding: 10px;
+            border-radius: 12px;
         }
 
-        .carousel-caption h5 {
-            font-size: 2rem;
+        .carousel-caption h2 {
+            font-size: 1rem;
             font-weight: bold;
         }
 
@@ -230,7 +238,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">🛒 ShopHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -281,13 +289,13 @@
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active"data-bs-interval="1000">
                     <img src="front page.png" class="d-block w-100" alt="Banner 1">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-bs-interval="500">
                     <img src="front 2.png" class="d-block w-100" alt="Banner 2">
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item"data-bs-interval="500">
                     <img src="front 3.png" class="d-block w-100" alt="Banner 3">
                 </div>
             </div>
@@ -302,13 +310,13 @@
         </div>
     </div>
 
-    <div class="products-section container-fluid">
+    <div class="products-section container-fluid" data-bs-interval="500">
         <h2 class="section-title">Featured Products</h2>
         <div class="row g-4">
 
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" style="position: relative;">
+                    <div class="card-img-wrapper">
                         <img src="computer system.png" class="card-img-top" alt="Computer System">
                         <span class="badge bg-danger position-absolute top-0 end-0 m-2">-20%</span>
                     </div>
@@ -339,7 +347,7 @@
 
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" style="position: relative;">
+                    <div class="card-img-wrapper">
                         <img src="cloths.png" class="card-img-top" alt="Premium Clothing">
                         <span class="badge-discount">-30%</span>
                     </div>
@@ -355,7 +363,7 @@
 
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" style="position: relative;">
+                    <div class="card-img-wrapper">
                         <img src="Electronics-components-985x642.jpg" class="card-img-top" alt="Electronic Components">
                     </div>
                     <div class="card-body">
@@ -370,7 +378,7 @@
 
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" style="position: relative;">
+                    <div class="card-img-wrapper" style">
                         <img src="smart device.png" class="card-img-top" alt="Smart Device">
                     </div>
                     <div class="card-body">
@@ -384,10 +392,10 @@
             </div>
 
             <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="card h-100">
-                    <div class="card-img-wrapper" style="position: relative;">
-                        <img src="latest gadjet.png" class="card-img-top" alt="Latest Gadget">
-                        <span class="badge-discount" style="background: #6c63ff;">SALE</span>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-img-wrapper">
+                        <img src="latest gadget.png" class="card-img-top" alt="Latest Gadget">
+                        <span class="badge-discount" SALE</span>
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Latest Gadget</h5>
@@ -401,7 +409,7 @@
 
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" style="position: relative;">
+                    <div class="card-img-wrapper">
                         <img src="portable device.png" class="card-img-top" alt="Portable Device">
                     </div>
                     <div class="card-body">
@@ -416,10 +424,13 @@
             
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card h-100">
-                    <div class="card-img-wrapper" style="position: relative;">
+                    <div class="card-img-wrapper" >
                         <img src="premium shoes.png" class="card-img-top" alt="Premium Shoes">
-                        <span class="badge-discount" style="background: #9b59b6;">PREMIUM</span>
+                        <span class="badge-discount">
+                            PREMIUM
+                        </span>
                     </div>
+
                     <div class="card-body">
                         <h5 class="card-title">Premium Shoes</h5>
                         <p class="card-text">Comfort and style combined in one perfect pair.</p>
@@ -471,7 +482,7 @@
 
             <div class="footer-bottom">
                 <p style="margin-bottom: 5px;">© 2024 ShopHub. All rights reserved.</p>
-                <p>Designed &amp; Developed with  bootstarp</p>
+                <p>Designed &amp; Developed with  Bootstarp</p>
             </div>
         </div>
     </footer>
